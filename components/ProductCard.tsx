@@ -18,7 +18,7 @@ const ProductCard = () => {
                 <span className="text-white font-semibold">1</span>
             </div> */}
                 <div className="px-3 py-2 inline-block rounded-lg mb-2 bg-pink-200 shadow-sm">
-                    <span>Step 1</span>
+                    <span className="font-semibold">Step 1</span>
                 </div>
             </div>
 
