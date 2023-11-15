@@ -55,7 +55,8 @@ export default function NavBar() {
 				<div className="container py-3 flex items-center justify-between">
 					{/* Left side */}
 					{/* Logo */}
-					<div>aaaaaaaaa</div>
+					<div> Skinmemo </div>
+
 
 					{/* Right side */}
 					<div className="flex items-center gap-4">
