@@ -51,6 +51,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         fullpageexceptnavbar: "#F6F5F6",
+        routinecard: "#FFFFFF"
       },
       borderRadius: {
         lg: "var(--radius)",
