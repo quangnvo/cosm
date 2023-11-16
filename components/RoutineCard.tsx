@@ -8,16 +8,35 @@ const RoutineCard = () => {
             {/* Date Picker */}
             <DatePickerCard />
 
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+            {/* Morning routine */}
+            <div>
+                <h2 className="text-xl font-semibold">Morning</h2>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </div>
             </div>
+
+            {/* Night routine */}
+            <div>
+                <h2 className="text-xl font-semibold">Night</h2>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                    <ProductCard />
+                </div>
+            </div>
+
+
         </div>
     )
 }
