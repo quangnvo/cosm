@@ -123,3 +123,62 @@ export const pricingPlans = [
     mostPopular: false,
   },
 ];
+
+// COSMETICS TYPES
+export const COSMETICS_TYPES = [
+  {
+    id: 1,
+    name: "Makeup remover",
+  },
+  {
+    id: 2,
+    name: "Cleanser",
+  },
+  {
+    id: 3,
+    name: "Toner",
+  },
+  {
+    id: 4,
+    name: "Serum",
+  },
+  {
+    id: 5,
+    name: "Eye cream",
+  },
+  {
+    id: 6,
+    name: "Treatment",
+  },
+  {
+    id: 7,
+    name: "Exfoliator",
+  },
+  {
+    id: 8,
+    name: "Retinol",
+  },
+  {
+    id: 9,
+    name: "Face mask",
+  },
+  {
+    id: 10,
+    name: "Sunscreen",
+  },
+];
+
+export const SKIN_TYPES = [
+  {
+    id: 1,
+    name: "Dry",
+  },
+  {
+    id: 2,
+    name: "Oily",
+  },
+  {
+    id: 3,
+    name: "Combination",
+  },
+];
