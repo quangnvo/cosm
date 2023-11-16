@@ -13,9 +13,11 @@ const RoutineCard = () => {
             {/* Skin type */}
             <SkinType />
 
+            <hr />
+
             {/* Morning routine */}
             <div>
-                <h2 className="text-xl font-semibold">🌞 Morning</h2>
+                <h3>☀️ Morning</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
                     <ProductCard />
                     <ProductCard />
@@ -30,9 +32,11 @@ const RoutineCard = () => {
             {/* Comment for routine morning */}
             <CommentForRoutine />
 
+            <hr />
+
             {/* Night routine */}
             <div>
-                <h2 className="text-xl font-semibold">🌛 Night</h2>
+                <h3>🌙 Night</h3>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
                     <ProductCard />
                     <ProductCard />

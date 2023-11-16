@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Select,
     SelectContent,
@@ -7,29 +9,26 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import { COSMETICS_TYPES } from "@/constants"
+
 
 const CosmeticsType = () => {
+
+    const renderCosmeticsType = () => {
+        return COSMETICS_TYPES.map((cosmeticstype) => {
+            return <SelectItem value={cosmeticstype.name}>
+                {cosmeticstype.name}
+            </SelectItem>
+        })
+    }
+
     return (
         <Select>
             <SelectTrigger className="w-[280px]">
                 <SelectValue placeholder="Select cosmetic type" />
             </SelectTrigger>
             <SelectContent>
-
-                <SelectGroup>
-                    <SelectLabel>North America</SelectLabel>
-                    <SelectItem value="est">Eastern Standard Time (EST)</SelectItem>
-                    <SelectItem value="cst">Central Standard Time (CST)</SelectItem>
-                    <SelectItem value="mst">Mountain Standard Time (MST)</SelectItem>
-                </SelectGroup>
-
-                <SelectGroup>
-                    <SelectLabel>Europe & Africa</SelectLabel>
-                    <SelectItem value="gmt">Greenwich Mean Time (GMT)</SelectItem>
-                    <SelectItem value="cat">Central Africa Time (CAT)</SelectItem>
-                    <SelectItem value="eat">East Africa Time (EAT)</SelectItem>
-                </SelectGroup>
-
+                {renderCosmeticsType()}
             </SelectContent>
         </Select>
     )
