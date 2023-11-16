@@ -1,6 +1,7 @@
 import ProductCard from "@/components/ProductCard";
 import DatePickerCard from "@/components/DatePickerCard";
 import SkinType from "./SkinType";
+import CommentForRoutine from "./CommentForRoutine";
 
 const RoutineCard = () => {
     return (
@@ -14,7 +15,7 @@ const RoutineCard = () => {
 
             {/* Morning routine */}
             <div>
-                <h2 className="text-xl font-semibold">Morning</h2>
+                <h2 className="text-xl font-semibold">🌞 Morning</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
                     <ProductCard />
                     <ProductCard />
@@ -25,10 +26,13 @@ const RoutineCard = () => {
                     <ProductCard />
                 </div>
             </div>
+
+            {/* Comment for routine morning */}
+            <CommentForRoutine />
 
             {/* Night routine */}
             <div>
-                <h2 className="text-xl font-semibold">Night</h2>
+                <h2 className="text-xl font-semibold">🌛 Night</h2>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-5 rounded-md">
                     <ProductCard />
                     <ProductCard />
@@ -40,6 +44,8 @@ const RoutineCard = () => {
                 </div>
             </div>
 
+            {/* Comment for routine night */}
+            <CommentForRoutine />
 
         </div>
     )
