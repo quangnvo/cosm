@@ -14,12 +14,12 @@ const ProductCard = () => {
     return (
         <div>
             <div className="flex justify-center">
-                {/* <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center mb-2">
-                <span className="text-white font-semibold">1</span>
-            </div> */}
-                <div className="px-4 py-2 inline-block rounded-md mb-2 shadow-sm">
-                    <span className="font-semibold">Step 1</span>
+                <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center mb-2">
+                    <span className="text-white font-semibold">1</span>
                 </div>
+                {/* <div className="px-4 py-2 inline-block rounded-md mb-2 shadow-sm">
+                    <span className="font-semibold">Step 1</span>
+                </div> */}
             </div>
 
             <Card>
