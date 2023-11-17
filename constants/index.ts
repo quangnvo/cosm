@@ -107,21 +107,6 @@ export const pricingPlans = [
     cta: "Get started",
     mostPopular: true,
   },
-  {
-    title: "Wanderlust Pro",
-    price: 19,
-    currency: "USD",
-    frequency: " / month",
-    description: "Unlock the full experience and explore Vietnam like a pro.",
-    features: [
-      "Unlimited destination access",
-      "Customized travel itineraries",
-      "24/7 premium support",
-      "Exclusive deals and offers",
-    ],
-    cta: "Upgrade now",
-    mostPopular: false,
-  },
 ];
 
 // COSMETICS TYPES
