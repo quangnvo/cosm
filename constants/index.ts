@@ -7,10 +7,6 @@ export const NAV_LINKS = [
 
 // CAMP SECTION
 export const PEOPLE_URL = [
-  // "/person-1.png",
-  // "/person-2.png",
-  // "/person-3.png",
-  // "/person-4.png",
   "/person-5.png",
   "/person-6.png",
   "/person-7.png",
@@ -71,13 +67,7 @@ export const FOOTER_CONTACT_INFO = {
 
 export const SOCIALS = {
   title: "Social",
-  links: [
-    "/facebook.svg",
-    "/instagram.svg",
-    // "/twitter.svg",
-    "/youtube.svg",
-    // "/wordpress.svg",
-  ],
+  links: ["/facebook.svg", "/instagram.svg", "/youtube.svg"],
 };
 
 // PRICING SECTION

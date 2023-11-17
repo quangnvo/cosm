@@ -2,6 +2,7 @@ import ProductCard from "@/components/ProductCard";
 import DatePickerCard from "@/components/DatePickerCard";
 import SkinType from "./SkinType";
 import CommentForRoutine from "./CommentForRoutine";
+import LocationCard from "./LocationCard";
 
 const RoutineCard = () => {
     return (
@@ -9,6 +10,9 @@ const RoutineCard = () => {
 
             {/* Date Picker */}
             <DatePickerCard />
+
+            {/* Location */}
+            <LocationCard />
 
             {/* Skin type */}
             <SkinType />
