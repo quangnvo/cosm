@@ -14,17 +14,16 @@ const ProductCard = () => {
     return (
         <div>
 
-            {/* Step number */}
-            <div className="flex justify-center">
-                <div className="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center mb-2">
-                    <span className="font-semibold">1</span>
-                </div>
-                {/* <div className="px-4 py-2 inline-block rounded-md mb-2 shadow-sm">
-                    <span className="font-semibold">Step 1</span>
-                </div> */}
-            </div>
 
-            <Card>
+            <Card className=" relative">
+                {/* <div className="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center mb-2">
+                    <span className="font-semibold">1</span>
+                </div> */}
+                {/* Step number */}
+                <div className="absolute top-0 transform translate-x-4 -translate-y-5 bg-gray-200 px-4 py-2 rounded-md shadow-sm">
+                    <span className="font-semibold">Step 1</span>
+                </div>
+
                 <CardHeader>
                     <Image
                         src="https://picsum.photos/200"

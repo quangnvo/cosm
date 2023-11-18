@@ -2,9 +2,9 @@ import RoutineCard from "@/components/RoutineCard";
 
 export default function Home() {
   return (
-    <div className="container py-20">
+    <div className="py-20">
       <div>
-        <h1 className="mb-10">
+        <h1 className="container mb-10">
           Your routine
         </h1>
 
