@@ -15,6 +15,7 @@ import { Input } from "@/components/ui/input"
 import { Popover, ConfigProvider } from 'antd';
 import { Button } from "./ui/button";
 import { Button as ButtonAntd, message, Popconfirm } from 'antd';
+import { Trash, Edit } from "lucide-react";
 
 
 const confirm = (e: React.MouseEvent<HTMLElement> | undefined) => {
@@ -29,18 +30,23 @@ const cancel = (e: React.MouseEvent<HTMLElement> | undefined) => {
 
 const content = (
 	<div className="flex gap-2">
-		<Button variant="outline">Edit</Button>
+
+		{/* Button Edit */}
+		<Button variant="outline">
+			<Edit size={17} />
+		</Button>
+
+		{/* Button Delete */}
 		<Popconfirm
-			title="Delete this cosmetic item"
-			description="Are you sure to delete this item?"
+			title="Are you sure to delete this item?"
 			onConfirm={confirm}
 			onCancel={cancel}
 			okText="Yes"
 			cancelText="No"
-			placement="bottomRight"
+			placement="bottomLeft"
 		>
 			<Button variant="destructive">
-				Delete
+				<Trash size={17} />
 			</Button>
 		</Popconfirm>
 	</div>
@@ -50,27 +56,19 @@ const content = (
 const ProductCard = () => {
 	return (
 		<div>
-			<Card>
+			<Card className="flex flex-col gap-4 border-none">
+
 				{/* Step number */}
-				<div className="flex justify-between pt-3 px-6">
-					<div className="flex gap-1 items-center">
-						<div className=" bg-gray-200 px-4 py-2 rounded-md shadow-sm">
-							<p className="font-medium">Step 1</p>
-						</div>
-					</div>
-					<div>
-						<ConfigProvider>
-							<div className="demo">
-								<div>
-									<Popover placement="bottomRight" content={content}>
-										<MoreHorizontal size={20} />
-									</Popover>
-								</div>
-							</div>
-						</ConfigProvider>
-					</div>
+				<div className="flex gap-1 items-center">
+					<Popover placement="bottomLeft" content={content}>
+						<Button variant="outline">
+							Step 1
+						</Button>
+					</Popover>
 				</div>
-				<CardHeader>
+
+				{/* Image of the product */}
+				<CardHeader className="p-0">
 					<Image
 						src="https://picsum.photos/200"
 						alt="Product Image"
@@ -80,7 +78,7 @@ const ProductCard = () => {
 					/>
 				</CardHeader>
 
-				<CardContent>
+				<CardContent className="p-0">
 					<div className="flex flex-col gap-3">
 						<div className="flex gap-2 items-center">
 							<div>

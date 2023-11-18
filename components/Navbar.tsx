@@ -59,7 +59,6 @@ export default function NavBar() {
 					{renderNavbarButton({ name: "Create routine", path: "/createroutine" })}
 				</>
 			) : ""}
-
 		</ul>
 	);
 
