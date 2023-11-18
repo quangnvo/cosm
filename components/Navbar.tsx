@@ -47,6 +47,7 @@ export default function NavBar() {
 			{renderNavbarButton({ name: "Home", path: "/" })}
 			{renderNavbarButton({ name: "Pricing", path: "/pricing" })}
 			{renderNavbarButton({ name: "Community", path: "/community" })}
+			{renderNavbarButton({ name: "Your routine", path: "/routine" })}
 		</ul>
 	);
 

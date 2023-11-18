@@ -1,3 +1,7 @@
+import { Icon } from "@iconify/react";
+import { SideNavItemType } from "@/types/types";
+import { Home, Folder, Mail } from "lucide-react";
+
 // NAVIGATION
 export const NAV_LINKS = [
   { href: "/", key: "home", label: "Home" },
@@ -157,3 +161,28 @@ export const SKIN_TYPES = [
     name: "Combination",
   },
 ];
+
+// SIDEBAR
+export const SIDENAV_ITEMS: SideNavItemType[] = [
+  {
+    title: "Home",
+    path: "/",
+    icon: <Home />,
+  },
+  {
+    title: "Projects",
+    path: "/projects",
+    icon: <Folder />,
+    submenu: true,
+    subMenuItems: [
+      { title: "All", path: "/projects" },
+      { title: "Web Design", path: "/projects/web-design" },
+      { title: "Graphic Design", path: "/projects/graphic-design" },
+    ],
+  },
+  {
+    title: "Messages",
+    path: "/messages",
+    icon: <Mail />
+  },
+]
