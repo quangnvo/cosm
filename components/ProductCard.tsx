@@ -20,8 +20,11 @@ const ProductCard = () => {
                     <span className="font-semibold">1</span>
                 </div> */}
                 {/* Step number */}
-                <div className="absolute top-0 transform translate-x-4 -translate-y-5 bg-gray-200 px-4 py-2 rounded-md shadow-sm">
-                    <span className="font-semibold">Step 1</span>
+                <div className="flex gap-1 items-center absolute top-0 transform translate-x-4 -translate-y-5">
+                    <span>🌅</span>
+                    <div className=" bg-gray-200 px-4 py-2 rounded-md shadow-sm">
+                        <span className="font-semibold">Step 1</span>
+                    </div>
                 </div>
 
                 <CardHeader>
