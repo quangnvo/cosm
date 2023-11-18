@@ -7,11 +7,18 @@ import {
 	CardTitle,
 } from "@/components/ui/card"
 import Image from 'next/image';
-import { Badge } from "@/components/ui/badge"
 import CosmeticsType from "./CosmeticsType";
 import { MoreHorizontal } from "lucide-react";
-import { Button } from "./ui/button";
 import { Input } from "@/components/ui/input"
+import { Popover, ConfigProvider } from 'antd';
+
+
+const content = (
+	<div>
+		<p>Content</p>
+		<p>Content</p>
+	</div>
+);
 
 
 const ProductCard = () => {
@@ -22,13 +29,19 @@ const ProductCard = () => {
 				<div className="flex justify-between pt-3 px-6">
 					<div className="flex gap-1 items-center">
 						<div className=" bg-gray-200 px-4 py-2 rounded-md shadow-sm">
-							<span className="font-semibold">Step 1</span>
+							<p className="font-medium">Step 1</p>
 						</div>
 					</div>
 					<div>
-						<button>
-							<MoreHorizontal />
-						</button>
+						<ConfigProvider>
+							<div className="demo">
+								<div>
+									<Popover placement="bottomRight" content={content}>
+										<MoreHorizontal size={20} />
+									</Popover>
+								</div>
+							</div>
+						</ConfigProvider>
 					</div>
 				</div>
 				<CardHeader>
