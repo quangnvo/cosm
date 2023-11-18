@@ -1,51 +1,66 @@
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
 } from "@/components/ui/card"
 import Image from 'next/image';
 import { Badge } from "@/components/ui/badge"
 import CosmeticsType from "./CosmeticsType";
+import { MoreHorizontal } from "lucide-react";
+import { Button } from "./ui/button";
+import { Input } from "@/components/ui/input"
+
 
 const ProductCard = () => {
-    return (
-        <div>
+	return (
+		<div>
+			<Card>
+				{/* Step number */}
+				<div className="flex justify-between pt-3 px-6">
+					<div className="flex gap-1 items-center">
+						<div className=" bg-gray-200 px-4 py-2 rounded-md shadow-sm">
+							<span className="font-semibold">Step 1</span>
+						</div>
+					</div>
+					<div>
+						<button>
+							<MoreHorizontal />
+						</button>
+					</div>
+				</div>
+				<CardHeader>
+					<Image
+						src="https://picsum.photos/200"
+						alt="Product Image"
+						width={200}
+						height={150}
+						className="w-full h-full object-cover rounded-md"
+					/>
+				</CardHeader>
 
+				<CardContent>
+					<div className="flex flex-col gap-3">
+						<div className="flex gap-2 items-center">
+							<div>
+								<p>Name: </p>
+							</div>
+							<Input type="email" placeholder="..." />
+						</div>
 
-            <Card className=" relative">
-                {/* <div className="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center mb-2">
-                    <span className="font-semibold">1</span>
-                </div> */}
-                {/* Step number */}
-                <div className="flex gap-1 items-center absolute top-0 transform translate-x-4 -translate-y-5">
-                    <span>🌅</span>
-                    <div className=" bg-gray-200 px-4 py-2 rounded-md shadow-sm">
-                        <span className="font-semibold">Step 1</span>
-                    </div>
-                </div>
-
-                <CardHeader>
-                    <Image
-                        src="https://picsum.photos/200"
-                        alt="Product Image"
-                        width={200}
-                        height={150}
-                    />
-                </CardHeader>
-
-                <CardContent>
-                    <p>The Ordinary Hyaluronic Acid 2% + B5</p>
-                </CardContent>
-
-                <CardFooter>
-                    <CosmeticsType />
-                </CardFooter>
-            </Card>
-        </div>
-    )
+						<div className="flex gap-2 items-center">
+							<div>
+								<p>Type: </p>
+							</div>
+							<CosmeticsType />
+						</div>
+					</div>
+				</CardContent>
+			</Card>
+		</div>
+	)
 }
 
 export default ProductCard

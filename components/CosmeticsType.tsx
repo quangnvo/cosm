@@ -25,7 +25,7 @@ const CosmeticsType = () => {
     return (
         <Select>
             <SelectTrigger className="w-[280px]">
-                <SelectValue placeholder="Select cosmetic type" />
+                <SelectValue placeholder="..." />
             </SelectTrigger>
             <SelectContent>
                 {renderCosmeticsType()}
