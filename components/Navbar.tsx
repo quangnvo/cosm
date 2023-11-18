@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import { User } from "lucide-react";
 
 
 export default function NavBar() {
@@ -47,7 +48,9 @@ export default function NavBar() {
 			{renderNavbarButton({ name: "Home", path: "/" })}
 			{renderNavbarButton({ name: "Pricing", path: "/pricing" })}
 			{renderNavbarButton({ name: "Community", path: "/community" })}
+			{renderNavbarButton({ name: "Profile", path: "/profile" })}
 			{renderNavbarButton({ name: "Your routine", path: "/routine" })}
+			{renderNavbarButton({ name: "Create routine", path: "/createroutine" })}
 		</ul>
 	);
 
@@ -66,6 +69,18 @@ export default function NavBar() {
 						{/* Render navlist */}
 						<div className=" hidden lg:block">
 							{navList}
+						</div>
+
+						{/* Button Login */}
+						<div className="">
+							<Link href="/login">
+								<Button className="flex gap-2 items-center">
+									<User size={18} />
+									<span>
+										Login
+									</span>
+								</Button>
+							</Link>
 						</div>
 
 						{/* Icon Hamburger */}
@@ -111,14 +126,13 @@ export default function NavBar() {
 			{/* Navbar on mobile (PUT OUTSIDE THE NAV)*/}
 			{isNavbarMobileOpen && (
 				<div className="flex flex-col gap-5 justify-center items-center text-center mx-4 py-5 border border-gray-20 rounded-xl">
-					{/* {navList()} */}
+					{navList}
 					{/* Login button */}
 					<div className="">
 						<Link href="/login">
-							<Button
-								type="button"
-								title="Login"
-							/>
+							<Button>
+								Login
+							</Button>
 						</Link>
 					</div>
 				</div>

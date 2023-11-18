@@ -1,5 +1,5 @@
 import { SideNavItemType } from "@/types/types";
-import { Home, Folder, Mail } from "lucide-react";
+import { Home, Mail, User, Users, FilePlus } from "lucide-react";
 
 // NAVIGATION
 export const NAV_LINKS = [
@@ -170,19 +170,18 @@ export const SIDENAV_ITEMS: SideNavItemType[] = [
     icon: <Home />,
   },
   {
-    title: "Projects",
-    path: "/projects",
-    icon: <Folder />,
-    submenu: true,
-    subMenuItems: [
-      { title: "All", path: "/projects" },
-      { title: "Web Design", path: "/projects/web-design" },
-      { title: "Graphic Design", path: "/projects/graphic-design" },
-    ],
+    title: "Profile",
+    path: "/profile/",
+    icon: <User />,
   },
   {
-    title: "Messages",
-    path: "/messages",
-    icon: <Mail />
+    title: "Community",
+    path: "/community",
+    icon: <Users />,
+  },
+  {
+    title: "Create routine",
+    path: "/createroutine",
+    icon: <FilePlus />
   },
 ]
