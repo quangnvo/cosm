@@ -5,6 +5,8 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { User } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { is } from "date-fns/locale";
 
 
 export default function NavBar() {
@@ -43,16 +45,24 @@ export default function NavBar() {
 		</li>
 	}
 
+	const isLogedIn = true
+
 	const navList = (
 		<ul className="mb-4 mt-2 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-1">
 			{renderNavbarButton({ name: "Home", path: "/" })}
 			{renderNavbarButton({ name: "Pricing", path: "/pricing" })}
 			{renderNavbarButton({ name: "Community", path: "/community" })}
-			{renderNavbarButton({ name: "Profile", path: "/profile" })}
-			{renderNavbarButton({ name: "Your routine", path: "/routine" })}
-			{renderNavbarButton({ name: "Create routine", path: "/createroutine" })}
+			{isLogedIn ? (
+				<>
+					{renderNavbarButton({ name: "Profile", path: "/profile" })}
+					{renderNavbarButton({ name: "Your routine", path: "/routine" })}
+					{renderNavbarButton({ name: "Create routine", path: "/createroutine" })}
+				</>
+			) : ""}
+
 		</ul>
 	);
+
 
 	return (
 		<>
@@ -72,16 +82,29 @@ export default function NavBar() {
 						</div>
 
 						{/* Button Login */}
-						<div className="">
-							<Link href="/login">
-								<Button className="flex gap-2 items-center">
-									<User size={18} />
-									<span>
-										Login
-									</span>
-								</Button>
-							</Link>
-						</div>
+						{!isLogedIn && (
+							<div className="">
+								<Link href="/login">
+									<Button className="flex gap-2 items-center">
+										<User size={18} />
+										<span>
+											Login
+										</span>
+									</Button>
+								</Link>
+							</div>
+						)}
+
+						{/* Avatar */}
+						{isLogedIn && (
+							<div className="flex gap-2 items-center">
+								<Avatar>
+									<AvatarImage src="https://picsum.photos/200" />
+									<AvatarFallback>CN</AvatarFallback>
+								</Avatar>
+								<span className="font-semibold">Quang</span>
+							</div>
+						)}
 
 						{/* Icon Hamburger */}
 						<button
@@ -128,13 +151,13 @@ export default function NavBar() {
 				<div className="flex flex-col gap-5 justify-center items-center text-center mx-4 py-5 border border-gray-20 rounded-xl">
 					{navList}
 					{/* Login button */}
-					<div className="">
+					{/* <div className="">
 						<Link href="/login">
 							<Button>
 								Login
 							</Button>
 						</Link>
-					</div>
+					</div> */}
 				</div>
 			)}
 		</>
