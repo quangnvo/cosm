@@ -21,16 +21,19 @@ const SkinType = () => {
 
 
     return (
-        <>
+        <div className='flex gap-3 items-center'>
+            <div>
+                <p>😊 Skin type: </p>
+            </div>
             <Select>
                 <SelectTrigger className="w-[180px]">
-                    <SelectValue placeholder="Skin type" />
+                    <SelectValue placeholder="..." />
                 </SelectTrigger>
                 <SelectContent>
                     {renderSkinType()}
                 </SelectContent>
             </Select>
-        </>
+        </div>
     )
 }
 
