@@ -1,3 +1,5 @@
+"use client"
+
 import {
 	Card,
 	CardContent,
@@ -11,12 +13,36 @@ import CosmeticsType from "./CosmeticsType";
 import { MoreHorizontal } from "lucide-react";
 import { Input } from "@/components/ui/input"
 import { Popover, ConfigProvider } from 'antd';
+import { Button } from "./ui/button";
+import { Button as ButtonAntd, message, Popconfirm } from 'antd';
 
+
+const confirm = (e: React.MouseEvent<HTMLElement> | undefined) => {
+	console.log(e);
+	message.success('Click on Yes');
+};
+
+const cancel = (e: React.MouseEvent<HTMLElement> | undefined) => {
+	console.log(e);
+	message.error('Click on No');
+};
 
 const content = (
-	<div>
-		<p>Content</p>
-		<p>Content</p>
+	<div className="flex gap-2">
+		<Button variant="outline">Edit</Button>
+		<Popconfirm
+			title="Delete this cosmetic item"
+			description="Are you sure to delete this item?"
+			onConfirm={confirm}
+			onCancel={cancel}
+			okText="Yes"
+			cancelText="No"
+			placement="bottomRight"
+		>
+			<Button variant="destructive">
+				Delete
+			</Button>
+		</Popconfirm>
 	</div>
 );
 
