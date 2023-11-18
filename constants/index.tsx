@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { SideNavItemType } from "@/types/types";
 import { Home, Folder, Mail } from "lucide-react";
 
@@ -147,6 +146,7 @@ export const COSMETICS_TYPES = [
   },
 ];
 
+// SKIN TYPES 
 export const SKIN_TYPES = [
   {
     id: 1,

@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/select"
 import { SKIN_TYPES } from '@/constants'
 
-
 const SkinType = () => {
 
     const renderSkinType = () => {
