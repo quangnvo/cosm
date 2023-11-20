@@ -56,7 +56,7 @@ const content = (
 const ProductCard = () => {
 	return (
 		<div>
-			<Card className="flex flex-col gap-4 border-none">
+			<Card className="flex flex-col gap-4 border-none shadow-none">
 
 				{/* Step number */}
 				<div className="flex gap-1 items-center">
