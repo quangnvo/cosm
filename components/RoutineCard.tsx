@@ -23,7 +23,7 @@ const RoutineCard = () => {
                 {/* Morning routine */}
                 <div className="flex flex-col gap-10">
                     <h3>Morning</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-10  rounded-md">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-10  rounded-md">
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
@@ -42,7 +42,7 @@ const RoutineCard = () => {
                 {/* Night routine */}
                 <div className="flex flex-col gap-10">
                     <h3>Night</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-x-5 gap-y-10 rounded-md">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-10 rounded-md">
                         <ProductCard />
                         <ProductCard />
                         <ProductCard />
